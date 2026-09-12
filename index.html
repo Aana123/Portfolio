@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aana Pandey | GTA Vice City Vaporwave Portfolio</title>
+  <meta name="description"
+    content="Official GTA Vice City retro vaporwave portfolio of Aana Pandey - Software Engineer, Web3 Operative & Creative Frontend Developer.">
+  <meta name="keywords"
+    content="Aana Pandey, GTA Vice City, Vaporwave Portfolio, Web3, MATLAB, Java, JavaScript, Python, C++, LeetCode">
+
+  <!-- Official GTA Vice City Fonts (Pricedown & Rage Italic) -->
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/rage-italic">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css?v=26">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="game-locked">
+
+  <!-- Palm Tree Viewport Silhouettes -->
+  <div class="palm-frame left"></div>
+  <div class="palm-frame right"></div>
+
+  <!-- GTA VICE CITY CINEMATIC GAME START OVERLAY -->
+  <div id="game-start-overlay" class="game-start-overlay">
+    <div class="cinematic-bar top"></div>
+    <div class="cinematic-bar bottom"></div>
+    <div class="game-start-flash"></div>
+    <div class="game-start-banner">
+      <div class="banner-badge">★ VICE CITY ★</div>
+      <div class="banner-title">GAME INITIALIZED</div>
+      <div class="banner-subtitle">CAREER MODE • CHARACTER SELECTION</div>
+      <div class="banner-loading">
+        <div class="banner-loading-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP VICE CITY HUD BAR -->
+  <header class="vice-hud">
+    <div class="hud-brand">
+      <div class="hud-logo">VICE CITY <span>// 1984</span></div>
+      <div class="wanted-stars" id="wanted-stars" title="Wanted Level (Click to change!)">
+        <span class="star active">★</span>
+        <span class="star active">★</span>
+        <span class="star active">★</span>
+        <span class="star">☆</span>
+        <span class="star">☆</span>
+      </div>
+    </div>
+
+    <div class="hud-center">
+      <div class="hud-clock" id="hud-clock">12:00:00 PM</div>
+      <div class="hud-cash" id="hud-cash" title="LeetCode Cash Reward">$518,000</div>
+    </div>
+
+    <div class="hud-controls">
+      <button class="hud-btn active" id="radio-btn">
+        <i class="fa-solid fa-radio"></i> RADIO: OFF
+      </button>
+      <button class="hud-btn active" id="sound-toggle-btn">
+        🔊 SFX: ON
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+     1. TITLE SEQUENCE (HERO SECTION)
+     Background: Miami Beach Dusk Parallax Sunset
+     ========================================== -->
+  <section class="hero-section" id="hero">
+    <!-- 21st.dev Ultramarine ASCII Background -->
+    <div class="hero-bg-ultramarine" id="hero-bg-ultramarine">
+      <video class="hero-ascii-video" id="hero-ascii-video"
+        src="https://assets.21st.dev/ascii-recipes/videos/user_2nElBLvklOKlAURm6W1PTu6yYFh/1783480454623-dacijf.mp4"
+        poster="https://assets.21st.dev/ascii-recipes/thumbnails/user_2nElBLvklOKlAURm6W1PTu6yYFh/930000ff-ed31-46de-9d2f-8b29cb0508b3.jpg"
+        autoplay muted loop playsinline></video>
+      <canvas id="ultramarine-ascii-canvas" class="ultramarine-ascii-canvas"></canvas>
+    </div>
+    <div class="hero-gradient-overlay"></div>
+    <div class="horizon-sun"></div>
+    <div class="synth-grid"></div>
+
+    <div class="hero-content slide-in-left">
+      <h1 class="hero-title">Aana Pandey</h1>
+      <p class="hero-subtitle">SOFTWARE ENGINEER • PROBLEM SOLVER • FULL STACK DEVELOPER</p>
+
+      <a href="#about" class="press-start-btn">
+        <i class="fa-solid fa-gamepad"></i> PRESS START TO PLAY
+      </a>
+    </div>
+  </section>
+
+  <!-- UNLOCKED PORTFOLIO MAIN CONTENT (ACCESSIBLE ONLY AFTER PRESS START) -->
+  <main class="main-portfolio-content" id="main-portfolio-content">
+    <!-- Dimmed Vice City Ambient Glitch GIF Background -->
+    <div class="portfolio-ambient-gif-bg"></div>
+
+    <!-- ==========================================
+       2. PLAYER STATS (ABOUT SECTION)
+     Background: Ocean Drive Palms & Arcade Pause Menu
+     ========================================== -->
+  <section class="section-container" id="about">
+    <div class="section-header slide-in-left">
+      <div class="section-subtitle">CHARACTER OVERVIEW</div>
+      <h2 class="section-title">PLAYER STATS</h2>
+    </div>
+
+    <div class="pause-menu-container">
+      <div class="pause-menu-header">
+        <div class="pause-menu-title"><i class="fa-solid fa-sliders"></i> PAUSE MENU</div>
+        <div class="pause-menu-tab">LEVEL: SENIOR BUILDER</div>
+      </div>
+
+      <div class="pause-menu-grid">
+        <!-- Left Column: Character Card (Slide In Right) -->
+        <div class="character-card slide-in-right">
+          <div class="portrait-wrapper">
+            <img src="assets/aana_photo.jpg" alt="Aana Pandey Character Portrait" class="portrait-img">
+          </div>
+          <h3 class="character-name">Aana Pandey</h3>
+          <div class="character-role">FULL STACK DEVELOPER</div>
+        </div>
+
+        <!-- Right Column: Skill Bars (Slide In Left) -->
+        <div class="stats-panel slide-in-left">
+          <div class="stats-group-title"
+            style="font-family:var(--font-hud); color:var(--vice-gold); font-size:1.1rem; letter-spacing:2px; border-bottom:1px solid var(--panel-border); padding-bottom:0.5rem">
+            TECHNICAL PROFICIENCY METERS</div>
+
+          <div class="stat-item">
+            <div class="stat-label-row">
+              <span class="stat-name"><i class="fa-brands fa-java" style="color:var(--ocean-cyan)"></i> JAVA
+                PROFICIENCY</span>
+              <span class="stat-val" style="color:var(--ocean-cyan)">92% (HEALTH)</span>
+            </div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner bar-java" data-val="92"></div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-label-row">
+              <span class="stat-name"><i class="fa-brands fa-js" style="color:var(--sunset-pink)"></i> JAVASCRIPT & WEB
+                UI</span>
+              <span class="stat-val" style="color:var(--sunset-pink)">95% (STAMINA)</span>
+            </div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner bar-js" data-val="95"></div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-label-row">
+              <span class="stat-name"><i class="fa-brands fa-python" style="color:var(--vice-gold)"></i> PYTHON & DATA
+                SIMULATION</span>
+              <span class="stat-val" style="color:var(--vice-gold)">88% (ARMOR)</span>
+            </div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner bar-python" data-val="88"></div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-label-row">
+              <span class="stat-name"><i class="fa-solid fa-code" style="color:#9933ff"></i> C++ & SYSTEM
+                ALGORITHMS</span>
+              <span class="stat-val" style="color:#9933ff">82% (SPECIAL)</span>
+            </div>
+            <div class="stat-bar-outer">
+              <div class="stat-bar-inner bar-cpp" data-val="82"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Complete Lower Area: Character Bio Spanning Both Left and Right -->
+      <div class="character-bio-full-width slide-in-left">
+        <div class="bio-header-tag"><i class="fa-solid fa-user-gear"></i> CHARACTER BIO</div>
+        <p class="character-bio-text">
+          I am a Software Engineer and simulation architect who builds high-performance digital experiences and predictive systems. Currently advancing through my Pre-Final year of Bachelor of Technology in Computer Science (Class of 2028). I thrive on turning complex, unstructured data into streamlined, scalable applications.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     3. MISSION LOG (PROJECTS SECTION)
+     Background: Vice City Skyline & Movie Posters
+     ========================================== -->
+  <section class="section-container" id="projects">
+    <div class="section-header slide-in-left">
+      <div class="section-subtitle">PROJECT DOSSIER</div>
+      <h2 class="section-title">MISSION LOG</h2>
+    </div>
+
+    <!-- FLAGSHIP PROJECT: SYNTRA OVERSIZED PREMIUM CARD -->
+    <div class="syntra-featured-wrapper slide-in-left">
+      <div class="syntra-game-card vhs-hover">
+        <div class="syntra-box-badge"><i class="fa-solid fa-crown"></i> FLAGSHIP OPERATIVE MISSION</div>
+
+        <div class="syntra-info-box">
+          <div class="syntra-title-row">
+            <h3 class="syntra-title">SYNTRA</h3>
+            <span class="syntra-tag">PREDICTIVE DIGITAL TWIN</span>
+          </div>
+
+          <!-- Mission Briefing Translucent Pager Box -->
+          <div class="syntra-briefing-box">
+            <div class="briefing-header">
+              <span class="briefing-led"></span>
+              <span class="briefing-title"><i class="fa-solid fa-terminal"></i> INCOMING MISSION BRIEFING //
+                OBJECTIVES</span>
+            </div>
+            <div class="briefing-content">
+              <div class="briefing-item">
+                <span class="briefing-label" style="color:var(--ocean-cyan)"><i class="fa-solid fa-crosshairs"></i>
+                  OBJECTIVE:</span>
+                <p>A predictive Digital Twin platform simulating health, finance, and career dynamics using multi-source
+                  time-series data.</p>
+              </div>
+              <div class="briefing-item">
+                <span class="briefing-label" style="color:var(--vice-gold)"><i class="fa-solid fa-bolt"></i>
+                  PERFORMANCE:</span>
+                <p>Built-in async caching to eliminate database spikes under heavy load.</p>
+              </div>
+              <div class="briefing-item">
+                <span class="briefing-label" style="color:var(--sunset-pink)"><i class="fa-solid fa-brain"></i>
+                  INTELLIGENCE:</span>
+                <p>Deterministic engine separates quantitative math from AI generation, guaranteeing zero data
+                  hallucinations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Arsenal (Tech Stack) -->
+          <div class="syntra-arsenal-section">
+            <div class="arsenal-title"><i class="fa-solid fa-layer-group"></i> THE ARSENAL (TECH STACK)</div>
+            <div class="arsenal-grid">
+              <div class="weapon-badge">
+                <i class="fa-brands fa-react weapon-icon" style="color:var(--ocean-cyan)"></i>
+                <span class="weapon-name">Next.js</span>
+              </div>
+
+              <div class="weapon-badge">
+                <i class="fa-brands fa-react weapon-icon" style="color:#61dafb"></i>
+                <span class="weapon-name">React Js</span>
+              </div>
+
+              <div class="weapon-badge">
+                <i class="fa-solid fa-code weapon-icon" style="color:#3178c6"></i>
+                <span class="weapon-name">TypeScript Js</span>
+              </div>
+
+              <div class="weapon-badge">
+                <i class="fa-solid fa-wand-magic-sparkles weapon-icon" style="color:var(--sunset-pink)"></i>
+                <span class="weapon-name">Framer Motion</span>
+              </div>
+
+              <div class="weapon-badge">
+                <i class="fa-solid fa-database weapon-icon" style="color:#00ff66"></i>
+                <span class="weapon-name">MongoDB</span>
+              </div>
+
+              <div class="weapon-badge">
+                <i class="fa-solid fa-chart-column weapon-icon" style="color:var(--vice-gold)"></i>
+                <span class="weapon-name">Recharts</span>
+              </div>
+
+              <div class="weapon-badge">
+                <i class="fa-solid fa-wind weapon-icon" style="color:#38bdf8"></i>
+                <span class="weapon-name">Tailwind</span>
+              </div>
+
+              <div class="weapon-badge">
+                <i class="fa-brands fa-css3-alt weapon-icon" style="color:#264de4"></i>
+                <span class="weapon-name">CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Links: GitHub & Deployed Live Site -->
+          <div class="syntra-actions-row">
+            <a href="https://github.com/Aana123/syntra" target="_blank" rel="noopener noreferrer"
+              class="source-code-link" title="View Source Code Repository">
+              <i class="fa-solid fa-floppy-disk"></i> SOURCE CODE
+            </a>
+
+            <a href="https://syntra-fin.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="start-mission-btn live-mission-btn">
+              <i class="fa-solid fa-gamepad"></i> START MISSION (LIVE DEMO)
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- MISSION BRIEFING MODAL WITH GOLDEN MISSION PASSED STAMP -->
+  <div class="modal-overlay" id="mission-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close">✕</button>
+      <div class="modal-header">
+        <div style="font-family:var(--font-arcade); font-size:0.75rem; color:var(--ocean-cyan)" id="modal-subtitle">
+          MISSION BRIEFING</div>
+        <h3 style="font-family:var(--font-hud); font-size:1.8rem; font-weight:900; color:#fff" id="modal-title">Mission
+          Title</h3>
+      </div>
+      <div style="font-size:0.95rem; line-height:1.6; color:#ddd; margin-bottom:2rem">
+        <p id="modal-desc">Mission description text goes here...</p>
+
+        <div
+          style="background:rgba(0,0,0,0.5); border-left:3px solid var(--ocean-cyan); padding:1rem; margin:1rem 0; border-radius:0 4px 4px 0">
+          <h5 style="font-family:var(--font-hud); font-size:0.85rem; color:var(--ocean-cyan); margin-bottom:0.5rem"><i
+              class="fa-solid fa-bullseye"></i> TARGET OBJECTIVES:</h5>
+          <ul id="modal-objectives-list"
+            style="list-style-type:square; padding-left:1.2rem; font-size:0.9rem; color:#ccc"></ul>
+        </div>
+
+        <div style="margin-top:1.5rem">
+          <h5 style="font-family:var(--font-hud); color:var(--sunset-pink); font-size:0.85rem; margin-bottom:0.5rem">
+            TECH SPECS DEPLOYED:</h5>
+          <div class="tech-tags" id="modal-tech"></div>
+        </div>
+      </div>
+
+      <!-- Golden Tilted "MISSION PASSED" Stamp -->
+      <div class="mission-passed-stamp" id="mission-passed-stamp">
+        MISSION PASSED!
+        <div
+          style="font-family:var(--font-arcade); font-size:0.8rem; color:#00ff66; text-shadow:0 0 10px #00ff66; margin-top:6px; text-align:center">
+          + $50,000 // RESPECT +100</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+     4. HACKATHONS SECTION
+     Background: Synthwave Arena Cyber Grid
+     ========================================== -->
+  <section class="section-container" id="hackathons">
+    <div class="section-header slide-in-left">
+      <div class="section-subtitle">COMPETITIVE ARENA</div>
+      <h2 class="section-title">HACKATHONS</h2>
+    </div>
+
+    <div class="hackathon-arena-grid">
+
+      <!-- HACKATHON 1: Texas Instruments WiSE Hackathon -->
+      <div class="hackathon-arena-card vhs-hover slide-in-left">
+        <div class="arena-card-header">
+          <span class="arena-badge"><i class="fa-solid fa-trophy"></i> NATIONAL LEVEL HACKATHON</span>
+          <span class="arena-status-badge status-passed"><i class="fa-solid fa-circle-check"></i> MISSION PASSED - TOP 5
+            FINALIST</span>
+        </div>
+
+        <h3 class="arena-title">Texas Instruments WiSE Hackathon</h3>
+        <div class="arena-org"><i class="fa-solid fa-location-dot"></i> TEXAS INSTRUMENTS, BANGALORE</div>
+
+        <!-- Mission Progression Pipeline -->
+        <div class="progression-pipeline">
+          <div class="pipeline-title"><i class="fa-solid fa-bars-staggered"></i> MISSION PROGRESSION:</div>
+          <div class="pipeline-steps">
+            <div class="step-badge">
+              <span class="step-num">STAGE 01</span>
+              <span class="step-name">Round 1 (13k+ Participants)</span>
+            </div>
+            <div class="step-arrow">➔</div>
+            <div class="step-badge">
+              <span class="step-num">STAGE 02</span>
+              <span class="step-name">Round 2 (Top 60)</span>
+            </div>
+            <div class="step-arrow">➔</div>
+            <div class="step-badge highlight-step">
+              <span class="step-num">STAGE 03</span>
+              <span class="step-name">On-Site Grand Finale (Top 36)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texas Instruments WiSE Sequential Media Carousel -->
+        <div class="hackathon-media-carousel" id="ti-wise-carousel">
+          <div class="carousel-display-box">
+            <img src="assets/TI WiSE 1.jpg" alt="TI WiSE Photo 1" class="carousel-media-item active">
+            <video src="assets/TI WiSE 2.mp4" loop muted playsinline class="carousel-media-item"></video>
+            <img src="assets/TI WiSE 3.jpg" alt="TI WiSE Photo 3" class="carousel-media-item">
+            <video src="assets/TI WiSE 4.mp4" loop controls playsinline data-audio="true" class="carousel-media-item"></video>
+
+            <div class="carousel-counter-badge"><i class="fa-solid fa-photo-film"></i> <span class="carousel-current">1</span> / 4</div>
+            <button type="button" class="carousel-nav-btn prev-btn" title="Previous Media Item">❮</button>
+            <button type="button" class="carousel-nav-btn next-btn" title="Next Media Item">❯</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HACKATHON 2: Smart India Hackathon 2025 -->
+      <div class="hackathon-arena-card vhs-hover slide-in-right">
+        <div class="arena-card-header">
+          <span class="arena-badge"><i class="fa-solid fa-award"></i> NATIONAL LEVEL HACKATHON</span>
+          <span class="arena-status-badge status-passed"><i class="fa-solid fa-circle-check"></i> MISSION PASSED -
+            NATIONAL GRAND FINALIST</span>
+        </div>
+
+        <h3 class="arena-title">Smart India Hackathon 2025</h3>
+        <div class="arena-org"><i class="fa-solid fa-location-dot"></i> MSRUAS BANGALORE</div>
+
+        <!-- Mission Progression Pipeline -->
+        <div class="progression-pipeline">
+          <div class="pipeline-title"><i class="fa-solid fa-bars-staggered"></i> MISSION PROGRESSION:</div>
+          <div class="pipeline-steps">
+            <div class="step-badge">
+              <span class="step-num">STAGE 01</span>
+              <span class="step-name">Round 1 & 2 Internal Qualifiers</span>
+            </div>
+            <div class="step-arrow">➔</div>
+            <div class="step-badge">
+              <span class="step-num">STAGE 02</span>
+              <span class="step-name">Semi-Finals</span>
+            </div>
+            <div class="step-arrow">➔</div>
+            <div class="step-badge highlight-step">
+              <span class="step-num">STAGE 03</span>
+              <span class="step-name">Top 5 Teams National Grand Finals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smart India Hackathon Sequential Media Carousel (Silent Muted Videos) -->
+        <div class="hackathon-media-carousel" id="sih-carousel">
+          <div class="carousel-display-box">
+            <video src="assets/SIH 1.mp4" autoplay loop muted playsinline class="carousel-media-item active"></video>
+            <video src="assets/SIH 2.mp4" loop muted playsinline class="carousel-media-item"></video>
+            <img src="assets/SIH 3.jpeg" alt="SIH Photo 3" class="carousel-media-item">
+
+            <div class="carousel-counter-badge"><i class="fa-solid fa-video"></i> <span class="carousel-current">1</span> / 3</div>
+            <button type="button" class="carousel-nav-btn prev-btn" title="Previous Media Item">❮</button>
+            <button type="button" class="carousel-nav-btn next-btn" title="Next Media Item">❯</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+     5. HONORS & AWARDS SECTION
+     Background: Golden Sunset Palms & Hall of Fame
+     ========================================== -->
+  <section class="section-container" id="awards">
+    <div class="section-header slide-in-left">
+      <div class="section-subtitle">UNLOCKED ACHIEVEMENTS // HALL OF FAME</div>
+      <h2 class="section-title">HONORS & AWARDS</h2>
+    </div>
+
+    <div class="awards-grid certs-grid">
+      
+      <!-- 1. ICPC AlgoQueen 2026 -->
+      <div class="award-card cert-card vhs-hover slide-in-left" data-evidence="icpc-algoqueen" title="Click to view full dossier & official certificate">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-trophy"></i> COMPETITIVE PROGRAMMING</span>
+          <span class="cert-verified"><i class="fa-solid fa-earth-americas"></i> INTL RANK #455</span>
+        </div>
+        <h3 class="cert-title">ICPC AlgoQueen 2026</h3>
+        <div class="cert-issuer">PREMIER GLOBAL COMPETITION</div>
+        <p class="cert-desc">
+          Global Rank 455 for solving 5/6 complex algorithmic problems.
+        </p>
+        <div class="award-evidence-footer">
+          <span><i class="fa-solid fa-box-archive"></i> VIEW FULL INTEL</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- 2. Texas Instruments WiSE Hackathon -->
+      <div class="award-card cert-card vhs-hover slide-in-right" data-evidence="ti-wise" title="Click to view full dossier & presentation details">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-microchip"></i> NATIONAL HACKATHON</span>
+          <span class="cert-verified" style="color:#00ff66"><i class="fa-solid fa-sack-dollar"></i> TOP 5 FINALIST</span>
+        </div>
+        <h3 class="cert-title">Texas Instruments WiSE Hackathon</h3>
+        <div class="cert-issuer">TEXAS INSTRUMENTS INDIA HQ</div>
+        <p class="cert-desc">
+          Top 5 National Finalist from 13,000+ entrants.
+        </p>
+        <div class="award-evidence-footer">
+          <span><i class="fa-solid fa-tape"></i> VIEW FULL INTEL</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- 3. Smart India Hackathon 2025 -->
+      <div class="award-card cert-card vhs-hover slide-in-left" data-evidence="sih-2025" title="Click to view full dossier & surveillance intel">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-network-wired"></i> NATIONAL GRAND FINALS</span>
+          <span class="cert-verified"><i class="fa-solid fa-bullseye"></i> PROJECT INDITWIN</span>
+        </div>
+        <h3 class="cert-title">Smart India Hackathon 2025</h3>
+        <div class="cert-issuer">MINISTRY OF EDUCATION</div>
+        <p class="cert-desc">
+          National Grand Finalist developing Project IndiTwin for PSID-25100.
+        </p>
+        <div class="award-evidence-footer">
+          <span><i class="fa-solid fa-camera-retro"></i> VIEW FULL INTEL</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- 4. Grace Hopper Celebration India Scholar -->
+      <div class="award-card cert-card vhs-hover slide-in-right" data-evidence="ghc-scholar" title="Click to view full dossier & acceptance PDF">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-crown"></i> ELITE FELLOWSHIP</span>
+          <span class="cert-verified" style="color:var(--sunset-pink)"><i class="fa-solid fa-gem"></i> 2024 & 2025 SCHOLAR</span>
+        </div>
+        <h3 class="cert-title">Grace Hopper Celebration India Scholar</h3>
+        <div class="cert-issuer">ANITAB.ORG FELLOWSHIP PROGRAM</div>
+        <p class="cert-desc">
+          Selected as dual-year elite scholar representing top women in tech.
+        </p>
+        <div class="award-evidence-footer">
+          <span><i class="fa-solid fa-id-card"></i> VIEW FULL INTEL</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- 5. AWS AI/ML Scholar -->
+      <div class="award-card cert-card vhs-hover slide-in-left" data-evidence="cert-aws" title="Click to view full dossier & official certificate">
+        <div class="cert-header">
+          <span class="cert-type" style="color:#ff9900"><i class="fa-brands fa-aws"></i> GLOBAL AI FELLOWSHIP</span>
+          <span class="cert-verified" style="color:#ff9900"><i class="fa-solid fa-percent"></i> TOP 4.5% GLOBAL</span>
+        </div>
+        <h3 class="cert-title">AWS AI/ML Scholar</h3>
+        <div class="cert-issuer">AMAZON WEB SERVICES & UDACITY</div>
+        <p class="cert-desc">
+          Top 4.5% global awardee for fully funded Udacity AI/ML Nanodegree.
+        </p>
+        <div class="award-evidence-footer" style="border-color:#ff9900; color:#ff9900">
+          <span><i class="fa-solid fa-box-archive"></i> VIEW FULL INTEL</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EVIDENCE CACHE DOSSIER MODAL -->
+  <div class="modal-overlay" id="evidence-modal">
+    <div class="modal-box evidence-modal-box">
+      <button class="modal-close-btn" id="evidence-modal-close">✕</button>
+      
+      <div class="modal-header">
+        <div class="evidence-modal-subtitle" id="evidence-modal-subtitle"><i class="fa-solid fa-folder-open"></i> EVIDENCE CACHE DOSSIER</div>
+        <h3 class="evidence-modal-title" id="evidence-modal-title">Achievement Title</h3>
+      </div>
+
+      <div class="evidence-modal-content" id="evidence-modal-body">
+        <!-- Dynamically injected evidence cache view -->
+      </div>
+
+      <div class="evidence-stamp-badge" id="evidence-stamp">
+        UNLOCKED!
+        <div class="stamp-sub">+ RESPECT +100 // VERIFIED</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IN-APP DOCUMENT & IMAGE VIEWER MODAL -->
+  <div class="modal-overlay" id="doc-viewer-modal" style="z-index: 20000;">
+    <div class="modal-box doc-viewer-modal-box">
+      <button class="modal-close-btn" id="doc-viewer-close">✕</button>
+      
+      <div class="modal-header" style="border-bottom: 2px solid var(--ocean-cyan); padding-bottom: 0.75rem; margin-bottom: 0.75rem; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <div class="evidence-modal-subtitle" id="doc-viewer-subtitle" style="font-family:var(--font-arcade); font-size:0.7rem; color:var(--ocean-cyan)">
+            <i class="fa-solid fa-eye"></i> VIEWER
+          </div>
+          <h3 class="evidence-modal-title" id="doc-viewer-title" style="font-family:var(--font-hud); color:#fff; font-size:1.2rem; margin-top:4px">
+            Document Title
+          </h3>
+        </div>
+        <div id="doc-viewer-counter-badge" class="hud-btn" style="border-color:var(--vice-gold); color:var(--vice-gold); font-family:var(--font-arcade); font-size:0.65rem; pointer-events:none;">
+          1 / 1
+        </div>
+      </div>
+
+      <div class="doc-viewer-wrapper" style="position:relative; flex:1; width:100%; height:100%; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+        <!-- Left Nav Arrow -->
+        <button type="button" class="doc-nav-btn doc-prev-btn" id="doc-prev-btn" title="Previous Document (Left Arrow)"><i class="fa-solid fa-chevron-left"></i></button>
+
+        <div class="doc-viewer-container" id="doc-viewer-container">
+          <!-- Dynamically injected iframe, img, or video -->
+        </div>
+
+        <!-- Right Nav Arrow -->
+        <button type="button" class="doc-nav-btn doc-next-btn" id="doc-next-btn" title="Next Document (Right Arrow)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <div class="doc-viewer-footer" style="margin-top:0.75rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:0.6rem">
+        <div style="display:flex; align-items:center; gap:12px">
+          <span id="doc-viewer-filename" style="font-family:var(--font-arcade); font-size:0.65rem; color:var(--vice-gold)">
+            FILE: preview.pdf
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+     6. CERTIFICATIONS SECTION
+     Background: Vice City License Bureau Grid
+     ========================================== -->
+  <section class="section-container" id="certifications">
+    <div class="section-header slide-in-left">
+      <div class="section-subtitle">OPERATIVE CREDENTIALS</div>
+      <h2 class="section-title">CERTIFICATIONS</h2>
+    </div>
+
+    <div class="certs-grid">
+      <!-- 1. Web3 & Decentralized Infrastructure -->
+      <div class="cert-card vhs-hover slide-in-left" data-evidence="cert-web3" title="Click question mark to pick up full intel & PDF dossier">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-id-badge"></i> LICENSE #8401</span>
+          <span class="cert-verified"><i class="fa-solid fa-circle-check"></i> VERIFIED</span>
+        </div>
+        <div class="cert-body-row">
+          <h3 class="cert-title">Web3 & Decentralized Infrastructure</h3>
+          <button type="button" class="gta-question-pickup" data-evidence="cert-web3" title="Pickup Full Info & PDF Dossier">?</button>
+        </div>
+      </div>
+
+      <!-- 2. AWS AI/ML Foundation & Architecture -->
+      <div class="cert-card vhs-hover slide-in-right" data-evidence="cert-aws" title="Click question mark to pick up full intel & PDF dossier">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-id-badge"></i> LICENSE #8402</span>
+          <span class="cert-verified"><i class="fa-solid fa-circle-check"></i> VERIFIED</span>
+        </div>
+        <div class="cert-body-row">
+          <h3 class="cert-title">AWS AI/ML Foundation & Architecture</h3>
+          <button type="button" class="gta-question-pickup" data-evidence="cert-aws" title="Pickup Full Info & PDF Dossier">?</button>
+        </div>
+      </div>
+
+      <!-- 3. Data Science & Quantitative Analysis -->
+      <div class="cert-card vhs-hover slide-in-left" data-evidence="cert-datascience" title="Click question mark to pick up full intel & PDF dossier">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-id-badge"></i>LICENSE #8403</span>
+          <span class="cert-verified"><i class="fa-solid fa-circle-check"></i> VERIFIED</span>
+        </div>
+        <div class="cert-body-row">
+          <h3 class="cert-title">Data Science & Quantitative Analysis</h3>
+          <button type="button" class="gta-question-pickup" data-evidence="cert-datascience" title="Pickup Full Info & PDF Dossier">?</button>
+        </div>
+      </div>
+
+      <!-- 4. Generative AI Workspace Integration -->
+      <div class="cert-card vhs-hover slide-in-right" data-evidence="cert-genai" title="Click question mark to pick up full intel & PDF dossier">
+        <div class="cert-header">
+          <span class="cert-type"><i class="fa-solid fa-id-badge"></i> LICENSE #8404</span>
+          <span class="cert-verified"><i class="fa-solid fa-circle-check"></i> VERIFIED</span>
+        </div>
+        <div class="cert-body-row">
+          <h3 class="cert-title">Generative AI Workspace Integration</h3>
+          <button type="button" class="gta-question-pickup" data-evidence="cert-genai" title="Pickup Full Info & PDF Dossier">?</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     7. SAVE GAME (RESUME DOWNLOAD SECTION)
+     Background: Vice City Memory Card Arcade Slot
+     ========================================== -->
+  <section class="section-container" id="resume">
+    <div class="section-header slide-in-left">
+      <div class="section-subtitle">SAVE PROGRESS</div>
+      <h2 class="section-title">SAVE GAME (RESUME)</h2>
+    </div>
+
+    <div class="save-game-wrapper vhs-hover slide-in-left">
+      <div class="save-card-header">
+        <div class="save-card-slot">MEMORY CARD SLOT 1</div>
+        <div class="save-card-status"><i class="fa-solid fa-hard-drive"></i> MEMORY CARD INSERTED</div>
+      </div>
+
+      <div class="save-card-body">
+        <!-- Floating Pixelated Floppy Disk Icon -->
+        <div class="floppy-icon-box">
+          <svg class="pixel-floppy-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Floppy Body -->
+            <path d="M6 4 H52 L60 12 V60 H6 Z" fill="#0033FF" stroke="#00FFFF" stroke-width="3" />
+            <!-- Metal Slider Gate -->
+            <rect x="16" y="4" width="28" height="20" fill="#c0c0c0" stroke="#121212" stroke-width="2" />
+            <rect x="22" y="8" width="8" height="12" fill="#333333" />
+            <!-- Label Paper -->
+            <rect x="12" y="32" width="40" height="24" fill="#ffffff" stroke="#121212" stroke-width="2" />
+            <rect x="16" y="36" width="32" height="4" fill="#FF3399" />
+            <rect x="16" y="44" width="24" height="3" fill="#00FFFF" />
+            <rect x="16" y="50" width="20" height="3" fill="#FFCC00" />
+            <!-- Write Protect Notch -->
+            <rect x="48" y="50" width="4" height="6" fill="#121212" />
+          </svg>
+          <div class="floppy-glow"></div>
+        </div>
+
+        <div class="save-details">
+          <div class="save-title">AANA PANDEY - RESUME</div>
+          <div class="save-actions">
+            <a href="assets/Aana_Pandey_Resume.pdf" download="Aana_Pandey_Resume.pdf" class="save-download-btn"
+              id="save-resume-btn">
+              <i class="fa-solid fa-floppy-disk"></i> SAVE GAME 
+            </a>
+            <span class="save-status-text" id="save-status-msg"><i class="fa-solid fa-circle-check"></i> READY FOR
+              DOWNLOAD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     8. THE SAFEHOUSE (CONTACT SECTION)
+     Background: Neon Night Motel & Payphone Booth
+     ========================================== -->
+  <section class="section-container" id="contact">
+    <div class="section-header slide-in-left">
+      <div class="section-subtitle">COMMUNICATIONS & HEADQUARTERS</div>
+      <h2 class="section-title">THE SAFEHOUSE (CONTACT)</h2>
+    </div>
+
+    <!-- Contact Badges (Cassette / Car Keys Icons) -->
+      <div class="contact-links-grid slide-in-right">
+        <!-- GitHub Cassette Tape -->
+        <a href="https://github.com/Aana123" target="_blank" rel="noopener noreferrer" class="contact-card vhs-hover">
+          <div class="contact-icon-box">
+            <i class="fa-solid fa-tape"></i>
+          </div>
+          <div class="contact-details">
+            <h4>GITHUB</h4>
+          </div>
+        </a>
+
+        <!-- LinkedIn Car Key -->
+        <a href="https://www.linkedin.com/in/aana-pandey/" target="_blank" rel="noopener noreferrer" class="contact-card vhs-hover">
+          <div class="contact-icon-box">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <div class="contact-details">
+            <h4>LINKEDIN</h4>
+          </div>
+        </a>
+
+        <!-- Email Payphone -->
+        <a href="mailto:aanapandey01@gmail.com" class="contact-card vhs-hover">
+          <div class="contact-icon-box">
+            <i class="fa-solid fa-phone-flip"></i>
+          </div>
+          <div class="contact-details">
+            <h4>EMAIL</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="vice-footer">
+    <div class="footer-logo">Aana Pandey</div>
+    <div class="footer-text">© 1984-2026 VICE CITY EDITION • ALL RIGHTS RESERVED</div>
+  </footer>
+  </main>
+
+  <!-- JavaScript Script -->
+  <script src="app.js?v=28"></script>
+</body>
+
+</html>
