@@ -2020,34 +2020,119 @@ body.game-locked .main-portfolio-content {
               radial-gradient(circle at 50% 50%, rgba(255, 51, 153, 0.1) 0%, transparent 70%);
 }
 
-.certs-grid {
+.certs-grid,
+.awards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+}
+
+@media (max-width: 900px) {
+  .certs-grid,
+  .awards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Feature 5th card in Awards across full width on desktop */
+@media (min-width: 901px) {
+  #awards .awards-grid .award-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 
 .award-card,
 .cert-card {
-  background: rgba(18, 18, 18, 0.9);
+  background: rgba(18, 18, 18, 0.92);
   border: 2px solid var(--panel-border);
-  border-radius: 8px; padding: 1.75rem;
+  border-radius: 10px;
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+  height: 100%;
 }
 
-.cert-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.cert-type { font-family: var(--font-hud); font-size: 0.75rem; color: var(--ocean-cyan); }
-.cert-verified { color: #00ff66; font-size: 0.8rem; font-family: var(--font-hud); }
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
 
-.cert-title { font-family: var(--font-hud); font-size: 1.25rem; color: #fff; flex-grow: 1; }
-.cert-issuer { font-family: var(--font-arcade); font-size: 0.7rem; color: var(--vice-gold); margin-bottom: 1rem; }
-.cert-desc { font-size: 0.9rem; color: #ccc; line-height: 1.5; }
+.cert-type {
+  font-family: var(--font-hud);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ocean-cyan);
+  letter-spacing: 1px;
+}
+
+.cert-verified {
+  color: #00ff66;
+  font-size: 0.78rem;
+  font-family: var(--font-hud);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cert-title {
+  font-family: var(--font-hud);
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  letter-spacing: 0.5px;
+}
+
+.cert-issuer {
+  font-family: var(--font-arcade);
+  font-size: 0.72rem;
+  color: var(--vice-gold);
+  margin-bottom: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.cert-desc {
+  font-size: 0.95rem;
+  color: #dddddd;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.award-evidence-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1.5px dashed rgba(0, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-arcade);
+  font-size: 0.72rem;
+  color: var(--ocean-cyan);
+  transition: all 0.3s ease;
+}
+
+.award-card:hover .award-evidence-footer {
+  color: var(--sunset-pink);
+  border-top-color: var(--sunset-pink);
+}
 
 .cert-body-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
-  margin-top: 0.5rem;
+  gap: 1.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 .gta-question-pickup {
@@ -3132,29 +3217,8 @@ body.game-locked .main-portfolio-content {
   /* Certifications & Awards Cards */
   .award-card,
   .cert-card {
-    padding: 1.25rem 1rem;
+    padding: 1.35rem 1.15rem;
     border-radius: 8px;
-  }
-
-  .cert-header {
-    margin-bottom: 0.75rem;
-  }
-
-  .cert-title {
-    font-size: 1.05rem;
-  }
-
-  .cert-issuer {
-    font-size: 0.65rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .cert-desc {
-    font-size: 0.85rem;
-  }
-
-  .cert-body-row {
-    gap: 0.75rem;
   }
 
   .gta-question-pickup {
