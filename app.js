@@ -539,15 +539,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 350);
 
-      // 4. Smooth Camera Warp Scroll to Character Select (#about) at +750ms
+      // 4. Smooth Camera Warp Scroll to Character Select (#about) at +1800ms
       setTimeout(() => {
         const aboutSection = document.getElementById('about');
         if (aboutSection) {
           aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 750);
+      }, 1800);
 
-      // 5. Highlight Character Card with Spawn Glow & Audio Blip at +1100ms
+      // 5. Highlight Character Card with Spawn Glow & Audio Blip at +2600ms
       setTimeout(() => {
         if (characterCard) {
           characterCard.classList.add('game-selected');
@@ -556,19 +556,19 @@ document.addEventListener('DOMContentLoaded', () => {
             characterCard.classList.remove('game-selected');
           }, 1400);
         }
-      }, 1100);
+      }, 2600);
 
-      // 6. Withdraw Cinematic Bars & Permanently Hide Hero Section (Only Refresh Returns to Landing Page) at +1700ms
+      // 6. Withdraw Cinematic Overlay & Permanently Hide Hero Section at +3400ms
       setTimeout(() => {
         if (gameOverlay) {
           gameOverlay.classList.remove('stamped', 'flashing', 'active');
         }
         if (heroSection) {
           heroSection.classList.remove('cinematic-zoom');
-          heroSection.style.display = 'none'; // Permanently remove hero landing page from scroll flow!
-          window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); // Lock scroll top at Character Selection!
+          heroSection.style.display = 'none';
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         }
-      }, 1700);
+      }, 3400);
     });
   }
 
@@ -1384,7 +1384,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             item.play().catch(err => {
               console.log('Autoplay audio handling:', err);
-              // Fallback if browser requires user gesture for unmuted video
               if (hasAudio) {
                 item.muted = true;
                 item.play().catch(() => {});
