@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // App Global State
   let soundEnabled = true;
   let crtEnabled = true;
-  let currentCash = 425000;
+  const initialCashEl = document.getElementById('hud-cash');
+  let currentCash = initialCashEl ? (parseInt(initialCashEl.textContent.replace(/[^0-9]/g, ''), 10) || 550000) : 550000;
   let wantedLevel = 3;
   let radioPlaying = false;
   let radioInterval = null;
@@ -389,6 +390,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const hudCashEl = document.getElementById('hud-cash');
   if (hudCashEl) {
     hudCashEl.addEventListener('click', () => {
+      const parsed = parseInt(hudCashEl.textContent.replace(/[^0-9]/g, ''), 10);
+      if (!isNaN(parsed) && parsed > currentCash) {
+        currentCash = parsed;
+      }
       currentCash += 1000;
       hudCashEl.textContent = '$' + currentCash.toLocaleString();
       playCashSound();
